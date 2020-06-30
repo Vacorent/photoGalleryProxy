@@ -14,6 +14,7 @@ app.use(cors());
 app.use('/reservation/*', createProxyMiddleware({ target: `http://localhost:3004`, changeOrigin: true }));
 app.use('/api/photos', createProxyMiddleware({ target: `http://localhost:3002`, changeOrigin: true }));
 app.use('/api/reviews', createProxyMiddleware({ target: `http://localhost:3002`, changeOrigin: true }));
+app.use('/api/carousel', createProxyMiddleware({ target: `http//localhost:3001`, changeOrigin: true }));
 
 
 app.listen(port, () => {
